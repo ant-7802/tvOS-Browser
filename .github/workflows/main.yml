@@ -16,7 +16,7 @@ jobs:
 
       # Checkout repository
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       # Create dummy provisioning profile
       - name: Create dummy provisioning profile
@@ -51,7 +51,7 @@ jobs:
 
       # Upload application
       - name: Upload RUNNER_TEMP directory
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: runner_temp
           path: /Users/runner/work/_temp
