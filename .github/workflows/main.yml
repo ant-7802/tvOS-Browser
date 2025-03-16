@@ -41,7 +41,7 @@ jobs:
           cd _Project
           xcodebuild -scheme "Browser" \
           -archivePath $RUNNER_TEMP/app.xcarchive \
-          -sdk iphoneos \
+          -sdk appletvos \
           -configuration Release \
           -destination generic/platform=tvOS \
           CODE_SIGN_IDENTITY="" \
