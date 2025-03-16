@@ -1,4 +1,4 @@
-name: "Build tvOS app"
+name: "Build tvos app"
 
 on:
   push:
@@ -35,15 +35,15 @@ jobs:
           echo "</dict>" >> $RUNNER_TEMP/DummyProfile.mobileprovision
           echo "</plist>" >> $RUNNER_TEMP/DummyProfile.mobileprovision
 
-      # Build archive for tvOS
-      - name: Build archive for tvOS
+      # Build archive
+      - name: Build archive
         run: |
           cd _Project
-          xcodebuild -scheme "Browser" \
+          xcodebuild -scheme "MultiCraft" \
           -archivePath $RUNNER_TEMP/app.xcarchive \
-          -sdk appletvos \
+          -sdk iphoneos \
           -configuration Release \
-          -destination "generic/platform=tvOS" \
+          -destination generic/platform=tvOS \
           CODE_SIGN_IDENTITY="" \
           CODE_SIGNING_REQUIRED=NO \
           CODE_SIGNING_ALLOWED=NO \
