@@ -39,7 +39,7 @@ jobs:
       - name: Build archive
         run: |
           cd _Project
-          xcodebuild -scheme "MultiCraft" \
+          xcodebuild -scheme "Browser" \
           -archivePath $RUNNER_TEMP/app.xcarchive \
           -sdk iphoneos \
           -configuration Release \
